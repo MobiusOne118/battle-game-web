@@ -1,10 +1,9 @@
 import Header from "@/components/header/header"
 import Footer from "@/components/footer/footer"
 import UnitTable from "@/components/unit-table/unit-table"
+import Button from "@/components/button/button"
 
 export default function Home() {
-  // const mechData = getMechs()
-
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-white dark:bg-black font-sans">
       <main className="flex flex-col flex-1 w-full min-h-screen py-24 px-24 gap-10">
