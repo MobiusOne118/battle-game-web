@@ -6,7 +6,7 @@ To be run alongside node-js repo to provide data
 
 -- Early days...
 TODO:
- - Update unit list via app
+ - Have the app update unit stats for Battle-Game (later)
  - Handle some kind of authentication
 
 

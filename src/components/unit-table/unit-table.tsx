@@ -15,7 +15,7 @@ export default async function UnitTable() {
         </thead>
         <tbody>
           {data.map((unit: UnitType) => (
-            <tr>
+            <tr key={unit.name}>
               <td>{unit.name}</td>
               <td>{unit.weight}</td>
             </tr>
