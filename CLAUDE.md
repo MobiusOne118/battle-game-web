@@ -23,6 +23,7 @@ A Next.js (App Router) companion web app for a "Battle Game" project. It's a dat
 - **Data layer** (`src/server/getMechs.ts`): server-only fetch helper. `getMechs()` hits a hardcoded `http://localhost:8080/mechs` endpoint (the sibling node-js API), swallows errors internally (catches and `console.error`s, returning `undefined` rather than throwing), and returns typed `UnitType[]` data. Callers must handle the `undefined` case.
 - **Path aliases** (`tsconfig.json`): `@/*` → `src/*`, plus explicit `@/components`, `@/styles`, `@/server` aliases. These are defined as `paths` relative to the tsconfig location (no `baseUrl` — it was intentionally removed since TypeScript 6 deprecates `baseUrl`; see `node_modules/next/dist/lib/typescript/getTypeScriptConfiguration.js` for Next's own migration handling of this).
 - **Styling**: Tailwind CSS v4 via `@tailwindcss/postcss` (see `postcss.config.mjs`), with theme tokens defined in `app/globals.css` using `@theme inline` (supports light/dark via `prefers-color-scheme`). `src/styles/` exists as an alias target but is currently empty.
+- **No barrel files**: components live in their own folder named after the file (e.g. `src/components/header/header.tsx`), but do not add `index.ts` re-export files. Import directly from the specific file (e.g. `@/components/header/header`).
 
 ## Important notes
 

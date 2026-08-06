@@ -1,6 +1,6 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import UnitTable from "@/components/unit-table"
+import Header from "@/components/header/header"
+import Footer from "@/components/footer/footer"
+import UnitTable from "@/components/unit-table/unit-table"
 
 export default function Home() {
   // const mechData = getMechs()
