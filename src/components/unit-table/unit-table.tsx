@@ -5,7 +5,11 @@ function formatHeader(key: string) {
 }
 
 export default async function UnitTable() {
-  const data = await getMechs() || []
+  const mechs = await getMechs()
+  if (!mechs) {
+    console.error("UnitTable: failed to load unit data")
+  }
+  const data = mechs || []
   const columns = Array.from(
     new Set(data.flatMap((unit: UnitType) => Object.keys(unit)))
   ) as (keyof UnitType)[]
@@ -22,7 +26,7 @@ export default async function UnitTable() {
         </thead>
         <tbody>
           {data.map((unit: UnitType, index: number) => (
-            <tr key={unit.name ?? index}>
+            <tr key={index}>
               {columns.map((column) => (
                 <td key={column}>{unit[column]}</td>
               ))}

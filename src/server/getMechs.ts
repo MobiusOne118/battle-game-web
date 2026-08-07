@@ -13,7 +13,7 @@ export async function getMechs() {
       throw new Error(`Status - ${res.status}`)
     }
 
-    const result: [UnitType] = await res.json()
+    const result: UnitType[] = await res.json()
     return result
   } catch(e) {
     console.error(e)
