@@ -1,6 +1,7 @@
 import Header from "@/components/header/header"
 import Footer from "@/components/footer/footer"
-import UnitTable from "@/components/unit-table/unit-table"
+import UnitsTable from '@/components/units-table/units-table'
+import Link from 'next/link'
 import Button from "@/components/button/button"
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
             - Companion app for battle game. Unit information and map preview.
           </p>
         </div>
-        <UnitTable />
+        <UnitsTable />
         <Footer>
           <p>
             Footer

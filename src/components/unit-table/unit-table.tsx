@@ -1,11 +1,12 @@
 import { getMechs, UnitType } from "@/server/getMechs"
+import GetUnits from '@/server/getUnits'
 
 function formatHeader(key: string) {
   return key.charAt(0).toUpperCase() + key.slice(1)
 }
 
-export default async function UnitTable() {
-  const mechs = await getMechs()
+export default function UnitTable() {
+  const mechs = GetUnits()
   if (!mechs) {
     console.error("UnitTable: failed to load unit data")
   }

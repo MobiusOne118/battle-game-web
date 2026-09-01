@@ -3,7 +3,11 @@ export type UnitType = {
   weight?: number
 }
 
-const url = 'http://localhost:8080/mechs'
+
+//
+// Old - Probably should delete
+//
+const url = 'http://localhost:8080/units'
 
 export async function getMechs() {
   try {
